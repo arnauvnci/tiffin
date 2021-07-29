@@ -12,6 +12,17 @@ phases:
       - echo "Enteredin post-build phase"
 artifacts:
   files:
-    - contact.php
-    - index.html
+    - about-us.php
+    - change-password.php
+    - check_emailavailability.php
+    - contact-us.php
+    - forgot-password.php
+    - invoice.php
+    - login.php
+    - logout.php
+    - my-order.php
+    - myprofile.php
+    - order.php
+    - register.php
+    - index.php
     - '**/*'
