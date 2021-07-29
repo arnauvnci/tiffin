@@ -72,7 +72,7 @@ echo "<script>alert('Invalid Details');</script>";
 			    <div class="dreamcrub">
 			   	 <ul class="breadcrumbs">
                     <li class="home">
-                       <a href="index.php" title="Go to Home Page">Home</a>&nbsp;
+                       <a href="index.php" title="Go to Home Page">HOME</a>&nbsp;
                        <span>&gt;</span>
                     </li>
                     <li class="women">
