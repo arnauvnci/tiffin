@@ -1,9 +1,9 @@
 <?php 
 // DB credentials.
-define('DB_HOST','localhost');
-define('DB_USER','root');
-define('DB_PASS','');
-define('DB_NAME','otssdb');
+define('DB_HOST','tiff1.cvhscff6xewm.eu-west-1.rds.amazonaws.com');
+define('DB_USER','tiff1');
+define('DB_PASS','tiffinpassword1');
+define('DB_NAME','tiffin_db');
 // Establish database connection.
 try
 {
