@@ -59,6 +59,76 @@ echo "<script>window.location.href ='add-tiffin.php'</script>";
    </head>
 
 <body>
+
+<script type="text/javascript">
+    AWS.config.region = 'us-east-1'; // 1. Enter your region
+
+    AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+        IdentityPoolId: 'eu-west-1:4e1b3d7e-9ba6-4477-a636-4dcf4200c142' // 2. Enter your identity pool
+    });
+
+    AWS.config.credentials.get(function(err) {
+        if (err) alert(err);
+        console.log(AWS.config.credentials);
+    });
+
+    var bucketName = 'tiffin01'; // Enter your bucket name
+        var bucket = new AWS.S3({
+            params: {
+                Bucket: bucketName
+            }
+        });
+
+        var fileChooser = document.getElementById('file-chooser');
+        var button = document.getElementById('upload-button');
+        var results = document.getElementById('results');
+        button.addEventListener('click', function() {
+
+            var file = fileChooser.files[0];
+
+            if (file) {
+
+                results.innerHTML = '';
+                var objKey = file.name;
+                var params = {
+                    Key: objKey,
+                    ContentType: file.type,
+                    Body: file,
+                    ACL: 'public-read'
+                };
+
+                bucket.putObject(params, function(err, data) {
+                    if (err) {
+                        results.innerHTML = 'ERROR: ' + err;
+                    } else {
+                        listObjs(); // this function will list all the files which has been uploaded
+                        //here you can also add your code to update your database(MySQL, firebase whatever you are using)
+
+                    }
+                });
+            } else {
+                alert("Nothing to upload");
+            }
+        }, false);
+        function listObjs() {
+            var prefix = 'testing';
+            bucket.listObjects({
+                Prefix: prefix
+            }, function(err, data) {
+                if (err) {
+                    results.innerHTML = 'ERROR: ' + err;
+                } else {
+                    var objKeys = "";
+                    data.Contents.forEach(function(obj) {
+                        objKeys += obj.Key + "<br>";
+                    });
+                    results.innerHTML = objKeys;
+                    alert("File uploaded sucessfully");
+                    document.location.href="dashboard.php";
+                }
+            });
+        }
+        </script>
   
     <div class="preloader">
         <div class="lds-ripple">
@@ -173,7 +243,7 @@ echo "<script>window.location.href ='add-tiffin.php'</script>";
                                                 <div class="row">
                                                     <div class="col-md-10">
                                                         <div class="form-group">
-                                                            <input type="file" class="form-control" id="" name="images" value="" required="true">
+                                                            <input type="file" id ="file-chooser" class="form-control" id="" name="images" value="" required="true">
                                                         </div>
                                                     </div>
                                                  
@@ -185,7 +255,8 @@ echo "<script>window.location.href ='add-tiffin.php'</script>";
                                   
                                     <div class="form-actions">
                                         <div class="text-center">
-                                            <button type="submit" class="btn btn-info" name="submit">Submit</button>
+                                            <button type="submit" class="btn btn-info" id="upload-button" name="submit">Submit</button>
+                                            <div id="results"></div>
                                            </div>
                                     </div>
                                 </form>
