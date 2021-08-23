@@ -35,6 +35,27 @@ include('includes/dbconnection.php');
 			});
 		</script>
 <script src="js/simpleCart.min.js"> </script>	
+
+ <script>
+        function myMap() {
+            myCenter = new google.maps.LatLng(53.338483,-6.2431645);
+            var mapOptions = {
+                center: myCenter,
+                zoom: 12,
+                scrollwheel: true,
+                draggable: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("contact-map"), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+            });
+            marker.setMap(map);
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?Key=AIzaSyB3mj-ffCxYhInp4roGCnsLXpjVLZR4yPc&callback=myMap" type="text/javascript"></script>
 </head>
 <body>
     <!-- header-section-starts -->
@@ -64,14 +85,12 @@ foreach($results as $row)
 {               ?>
 			 		
 					        <div class="col-md-12 company-right wow fadeInLeft" data-wow-delay="0.4s">
-					        	<div class="contact-map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1578265.0941403757!2d-98.9828708842255!3d39.41170802696131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sin!4v1407515822047"> </iframe>
-		</div>
-      
+			<div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:300px;"></div>
+				   </div>
 	  <div class="company-right">
 					        	<div class="company_ad">
 							     		<h3><?php  echo htmlentities($row->PageTitle);?></h3>
-							     		<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit velit justo.</span>
+							     		<span>Have query connect with us at.</span>
 			      						<address>
 											 <p>email:<?php  echo htmlentities($row->Email);?></p>
 											 <p>phone:  <?php  echo htmlentities($row->MobileNumber);?></p>
@@ -83,7 +102,7 @@ foreach($results as $row)
 									</div>	
 									<div class="follow-us">
 										<h3>follow us on</h3>
-										<a href="#"><i class="facebook"></i></a>
+										<a href="https://www.facebook.com/arnauv.kaushik"><i class="facebook"></i></a>
 										<a href="#"><i class="twitter"></i></a>
 										<a href="#"><i class="google-pluse"></i></a>
 									</div>
@@ -112,5 +131,35 @@ foreach($results as $row)
 					</script>
 				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 
+
+ <script>
+        function myMap() {
+            myCenter = new google.maps.LatLng(53.3460639,-6.2570491);
+            var mapOptions = {
+                center: myCenter,
+                zoom: 12,
+                scrollwheel: true,
+                draggable: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: myCenter,
+            });
+            marker.setMap(map);
+        }
+    </script>
+    <script>
+        function sendGaEvent(category, action, label) {
+            ga('send', {
+                hitType: 'event',
+                eventCategory: category,
+                eventAction: action,
+                eventLabel: label
+            });
+        };
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?Key=AIzaSyB3mj-ffCxYhInp4roGCnsLXpjVLZR4yPc&callback=myMap" type="text/javascript"></script>
 </body>
 </html>
