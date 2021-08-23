@@ -6,7 +6,7 @@ include('includes/dbconnection.php');
 <!DOCTYPE html>
 <html>
 <head>
-<title>Online Tiffin Service System | Home Page</title>
+<title>ASK Foods O.T.S.S | Home Page</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -44,7 +44,7 @@ include('includes/dbconnection.php');
 		    <div class="container">
 				<div class="banner-info">
 					<div class="banner-info-head text-center wow fadeInLeft" data-wow-delay="0.5s">
-						<h1>Online Tiffin Service System</h1>
+						<h1>ASK Foods O.T.S.S</h1>
 						<div class="line">
 							<h2> To Order Online</h2>
 						</div>
