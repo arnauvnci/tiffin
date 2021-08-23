@@ -1,3 +1,3 @@
   <footer class="footer text-center text-muted">
-                <p style="color: red">Online Tiffin Service System.</p>
+                <p style="color: red">ASK Food O.T.S.S</p>
             </footer>
