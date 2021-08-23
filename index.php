@@ -125,7 +125,7 @@ foreach($results as $row)
 							
 						    <a href="order.php?oid=<?php echo $row->ID;?>"><img src="admin/images/<?php echo $row->Image;?>" width="200" height="200" /> </a>
 						    
-							<label style="padding-top: 20px;padding-bottom: 20px"><?php  echo htmlentities($row->Title);?>: $<?php  echo htmlentities($row->Cost);?></label>
+							<label style="padding-top: 20px;padding-bottom: 20px"><?php  echo htmlentities($row->Title);?>: €<?php  echo htmlentities($row->Cost);?></label>
 
 					    </div>
 						
