@@ -115,7 +115,7 @@ $totconorder=$query3->rowCount();
                                     </h6>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i data-feather="dollar-sign"></i></span>
+                                    <span class="iconify" data-icon="bi:currency-euro"></span>
                                 </div>
                             </div>
                         </div>
@@ -138,7 +138,7 @@ $totcancorder=$query4->rowCount();
                                     <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate"><a href="cancelled-order.php">Total Cancelled Order</a></h6>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i data-feather="file-plus"></i></span>
+                                    <span class="opacity-7 text-muted"><i data-feather="file-plus"></i></span> 
                                 </div>
                             </div>
                         </div>
@@ -176,6 +176,7 @@ $totallcorder=$query5->rowCount();
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
     <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     <!-- apps -->
     <!-- apps -->
     <script src="dist/js/app-style-switcher.js"></script>
