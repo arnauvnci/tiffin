@@ -46,7 +46,7 @@ include('includes/dbconnection.php');
 					<div class="banner-info-head text-center wow fadeInLeft" data-wow-delay="0.5s">
 						<h1>ASK Foods O.T.S.S</h1>
 						<div class="line">
-							<h2> To Order Online</h2>
+							<h2>Order Online</h2>
 						</div>
 					</div>
 				</div>
