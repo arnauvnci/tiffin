@@ -115,7 +115,7 @@ $totconorder=$query3->rowCount();
                                     </h6>
                                 </div>
                                 <div class="ml-auto mt-md-3 mt-lg-0">
-                                    <span class="opacity-7 text-muted"><i data-feather="euro-sign"></i></span>
+                                    <span class="opacity-7 text-muted"><i data-feather="fa-euro-sign"></i></span>
                                 </div>
                             </div>
                         </div>
