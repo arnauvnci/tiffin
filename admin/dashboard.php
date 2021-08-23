@@ -57,7 +57,7 @@ if($query->rowCount() > 0)
 {
 foreach($results as $row)
 {               ?>
-                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Good Morning <?php  echo $row->AdminName;?>!</h3><?php $cnt=$cnt+1;}} ?>
+                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Welcome! <?php  echo $row->AdminName;?>!</h3><?php $cnt=$cnt+1;}} ?>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
