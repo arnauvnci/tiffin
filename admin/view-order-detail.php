@@ -179,7 +179,7 @@ if($row->Status=="Confirmed")
   echo "Your Order has been Confirmed";
 }
 
-if($row->Status=="Cancellled")
+if($row->Status=="Cancelled")
 {
  echo "Your Order has been cancelled";
 }
@@ -187,7 +187,7 @@ if($row->Status=="Cancellled")
 
 if($row->Status=="")
 {
-  echo "Not Response Yet";
+  echo "No Response Yet";
 }
 
 
@@ -273,14 +273,14 @@ if ($status==""){
 
    <select name="status" class="form-control wd-450" required="true" >
      <option value="Confirmed" selected="true">Confirmed</option>
-     <option value="Cancellled">Cancellled</option>
+     <option value="Cancelled">Cancelled</option>
    </select></td>
   </tr>
 </table>
 </div>
 <div class="modal-footer">
  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
- <button type="submit" name="submit" class="btn btn-primary">Update</button>
+ <button type="submit" name="submit" class="btn btn-primary"><a href="../index.php">Update</button>
   
   </form>
                                 </div>
