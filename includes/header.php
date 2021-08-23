@@ -1,7 +1,7 @@
 <div class="container">
             <div class="top-header">
                 <div class="logo">
-                    <a href="index.php"><strong style="color: red;font-size: 24px">Online Tiffin</strong><strong style="color: green;font-size: 24px;padding-left: 10px">Service System</strong></a>
+                    <a href="index.php"><strong style="color: red;font-size: 24px">ASK Foods</strong><strong style="color: green;font-size: 24px;padding-left: 10px">O.T.S.S</strong></a>
                 </div>
                
                 
